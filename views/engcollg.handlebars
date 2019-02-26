@@ -1,0 +1,20 @@
+   
+     <!-- Projects Section -->
+    <section id="projects" class="projects-section bg-light">
+      <div class="container">{{#each clgs}}
+        <!-- Featured Project Row -->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+          <div class="col-xl-8 col-lg-7">
+            <img class="img-fluid mb-3 mb-lg-0" src="../img/bg-masthead.jpg" alt="">
+          </div>
+          <div class="col-xl-4 col-lg-5">
+            <div class="featured-text text-center text-lg-left">
+              <h4>{{this.name}}</h4>
+              <h5><a href="/users/viewcollg/{{this.name}}">Check College</a></h5>
+              <p class="text-black-50 mb-0">{{this.about}}</p>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </section>

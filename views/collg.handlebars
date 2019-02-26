@@ -1,0 +1,31 @@
+<div class="container">
+<h3 class="display-3">Your College</h3>
+<form method="post" action="/inside/collg">
+	<div class="form-group">
+		<label>Name of College</label>
+		<input type="text" class="form-control" name="name" value="{{clg.name}}" disabled>
+	</div>
+	<div class="form-group">
+		<label>College Representative</label>
+		<input type="text" class="form-control" name="crname" value="{{clg.crname}}" disabled>
+	</div>
+	<div class="form-group">
+		<label>Location</label>
+		<textarea rows="4" cols="10" class="form-control" name="location" disabled>{{clg.location}}</textarea>
+	</div>
+	<div class="form-group">
+		<label>About</label>
+		<textarea rows="4" cols="10" class="form-control" name="about" >{{clg.about}}</textarea>
+	</div>
+	<div class="form-group">
+		<label>Mode of Admission</label>
+		<textarea rows="4" cols="10" class="form-control" name="moa">{{clg.modeOfAdmission}}</textarea>
+	</div>
+	<div class="form-group">
+		<label>Placements</label>
+		<textarea rows="4" cols="10" class="form-control" name="place">{{clg.placements}}</textarea>
+	</div>
+	<center><button type="submit" class="btn btn-primary">Submit</button></center>
+</form>
+</div>
+<br>

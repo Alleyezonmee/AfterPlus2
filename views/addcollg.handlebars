@@ -1,0 +1,35 @@
+<h2 class="page-header">Add College</h2>
+{{#if errors}}
+              {{#each errors}}
+               <div class="alert alert-danger">
+                {{msg}}
+               </div>
+              {{/each}}
+            {{/if}} 
+<form method="post" action="/inside/addcollg">
+	<div class="form-group">
+		<label>Name of College</label>
+		<input type="text" class="form-control" name="name">
+	</div>
+	<div class="form-group">
+		<label>Location</label>
+		<textarea rows="4" cols="10" class="form-control" name="location"></textarea>
+	</div>
+	<label>Courses Provided</label>
+	<div class="form-check-inline">
+     <label class="form-check-label">
+      <input type="checkbox" class="form-check-input" value="1" name="engg" checked>Engineering 
+     </label>
+    </div>
+    <div class="form-check-inline">
+     <label class="form-check-label">
+      <input type="checkbox" class="form-check-input" value="1" name="med">Medical Sciences
+     </label>
+    </div>
+    <div class="form-check-inline">
+     <label class="form-check-label">
+      <input type="checkbox" class="form-check-input" value="1" name="mgmt">Management
+     </label>
+    </div><br><br>
+	<center><button type="submit" class="btn btn-default">Submit</button></center>
+</form>

@@ -1,0 +1,43 @@
+<h2 class="page-header">Write a Review</h2>
+{{#if errors}}
+              {{#each errors}}
+               <div class="alert alert-danger">
+                {{msg}}
+               </div>
+              {{/each}}
+            {{/if}} 
+<form method="post" action="/inside/review">
+		<div class="form-group">
+		<label>Name</label>
+		<input type="text" class="form-control" name="name">
+	</div>
+	<div class="form-group">
+		<label>Name of College</label>
+		<select name="cname" class="form-control">
+		 {{#each Names}}
+         <option value="{{this.name}}">{{this.name}}, {{this.location}}</option>
+         {{/each}}
+        </select>
+	</div>
+	<div class="form-group">
+		<label>Enter Your College ID</label>
+		<input type="text" class="form-control" name="cid">
+	</div>
+	<div class="form-group">
+		<label>Infrastructure</label>
+		<textarea rows="4" cols="10" class="form-control" name="infra" placeholder="Describe about the classrooms, labs and number of departments etc. . . . ."></textarea>
+	</div>
+	<div class="form-group">
+		<label>Faculty</label>
+		<textarea rows="4" cols="10" class="form-control" name="faculty" placeholder="Describe about the faculty and their way of teaching etc. . . . "></textarea>
+	</div>
+	<div class="form-group">
+		<label>Placements</label>
+		<textarea rows="4" cols="10" class="form-control" name="place" placeholder="Describe about the placements. Do the college have a seperate placement cell. Companies visiting the campus and details related to average package. . . . ."></textarea>
+	</div>
+	<div class="form-group">
+		<label>Other</label>
+		<textarea rows="4" cols="10" class="form-control" name="other" placeholder="Any other things you would like to add different from above mentioned topics. . . ."></textarea>
+	</div>
+	<center><button type="submit" class="btn btn-default">Submit</button></center>
+</form>

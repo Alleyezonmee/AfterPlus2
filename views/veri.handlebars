@@ -1,0 +1,44 @@
+ <div class="container">
+ <div class="my-3 p-3 bg-white rounded box-shadow">
+  {{#if success_msg}} 
+            <div class="alert alert-success">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}} 
+            <div class="alert alert-danger">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}} 
+            <div class="alert alert-danger">{{error}}</div>
+    {{/if}}
+        <h2 class="display-4">Verification of Reviews</h2><br>
+        {{#if det}}
+        {{#each det}}
+        <div class="row text-center">
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+            <div class="card-body">
+              <h4 class="card-title">{{this.name}}</h4>
+              <p class="card-text">College ID: {{this.cid}}</p>
+            </div>
+            <div class="card-footer">
+              <a href="/inside/validate/{{this.cid}}" class="btn btn-primary">Valid</a>
+              <a href="/inside/invalid/{{this.cid}}" class="btn btn-primary">Invalid</a>
+            </div>
+          </div>
+        </div>
+      </div>
+        {{/each}}
+        {{else}}
+        <header class="jumbotron my-4">
+        <h1 class="display-3">No Verifcations Yet!</h1>
+      </header>
+      <header class="jumbotron my-4">
+        <h1 class="display-3"></h1>
+      </header>
+        {{/if}}
+      </div>
+    </div>
+ 

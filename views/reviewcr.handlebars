@@ -1,0 +1,25 @@
+<div class="container">
+<div class="my-3 p-3 bg-white rounded box-shadow">
+        <h4 class="display-4">Reviews</h4>
+        {{#if reviews}}
+        {{#each reviews}}
+        <div class="media text-muted pt-3">
+          <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
+          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark">@{{this.cid}}</strong><br>
+            <label>Infrastructure:</label>{{this.infra}}<br>
+            <label>Faculty:</label>{{this.fac}}<br>
+            <label>Placements:</label>{{this.place}}<br>
+            <label>Others:</label>{{this.oth}}<br>
+          </p>
+        </div>
+        {{/each}}
+        {{else}}
+        <div class="media text-muted pt-3">
+          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark">No Reviews.</strong>
+          </p>
+        </div>
+        {{/if}}
+      </div>
+    </div>
