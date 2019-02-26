@@ -11,7 +11,7 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/cc', {useNewUrlParser: true});
+mongoose.connect('mongodb://paras:p9p9p9p9p@ds125385.mlab.com:25385/cool1', {useNewUrlParser: true});
 var db = mongoose.connection;
 
 // Routes for our app
