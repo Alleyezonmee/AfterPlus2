@@ -92,10 +92,11 @@ application.use('/', routes);
 application.use('/users', users);
 application.use('/inside', inside);
 
-// Port
+/*// Port
 
 application.set('port', (process.env.port || 8080));
 
 application.listen(application.get('port'), function() {
 	console.log('Server Started on '+application.get('port'));
-});
+});*/
+module.exports = application;
