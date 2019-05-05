@@ -57,7 +57,11 @@ body, html {
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="/users/index" class="w3-bar-item w3-button">HOME</a>
+    {{#if user}}
+        <a class="w3-bar-item w3-button" href="/users/home">HOME</a>
+        {{else}}
+        <a class="w3-bar-item w3-button" href="/users/index">HOME</a>
+        {{/if}}
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> REVIEWS</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
@@ -66,7 +70,11 @@ body, html {
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-  	<a href="/users/index" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+  	{{#if user}}
+        <a  class="w3-bar-item w3-button" onclick="toggleFunction()" href="/users/home">Home</a>
+        {{else}}
+        <a class="w3-bar-item w3-button" onclick="toggleFunction()" href="/users/index">Home</a>
+        {{/if}}
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
     <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">REVIEWS</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>

@@ -343,7 +343,28 @@ router.post('/addcollg', function(req, res) {
 	}
 });
 
+// Seeing College Page
 
+router.get('/vcrcollg', ensureAuthenticated, function(req, res) {
+	var reviews = [];
+	College.getCollegeByCRName(req.user.name, function(err, college) {
+		if(err) throw err;
+		if(college) {
+			Review.getReviewsByCollege(college.name, function(er, cursor) {
+				if(er) throw er;
+				if(cursor) {
+					cursor.forEach(function(doc, e) {
+						if(doc.validity==true) {
+							reviews.push(doc);
+						}
+					}, res.render('college', {college: college, layout: 'blank', reviews: reviews}));
+				}
+			});
+		} else {
+			console.log('Not Found');
+		}
+	});
+});
 
 // Editing College Details.
 

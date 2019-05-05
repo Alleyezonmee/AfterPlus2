@@ -13,12 +13,13 @@
     {{/if}}
         <h2 class="display-4">Requests</h2><br>
         {{#if rq}}
-        {{#each rq}}
         <div class="row text-center">
+        {{#each rq}}
+        
 
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+            <img class="card-img-top" src="/img/verpic.jpg" alt="">
             <div class="card-body">
               <h4 class="card-title">{{this.cname}}</h4>
               <p class="card-text">Representative: {{this.name}}<br> Location: {{this.location}}</p>
@@ -29,14 +30,11 @@
             </div>
           </div>
         </div>
-      </div>
         {{/each}}
+        </div>
         {{else}}
         <header class="jumbotron my-4">
         <h1 class="display-3">No Requests Yet!</h1>
-      </header>
-      <header class="jumbotron my-4">
-        <h1 class="display-3"></h1>
       </header>
         {{/if}}
       </div>

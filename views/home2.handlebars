@@ -13,13 +13,7 @@
           {{#if error}} 
             <div class="alert alert-danger">{{error}}</div>
     {{/if}}
-            <center><h1 style="background-color: #343a40; color: white; text-transform: uppercase;; letter-spacing: 2px; font-weight: lighter;">Search Colleges</h1>
-                 <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category" class="form-control" style="width: 400px;">
-                 <ul id="myMenu" onmouseout="myfunc2()">
-                {{#each Names}}
-                <li><a href="/users/viewcollg/{{this.name}}">{{this.name}}</a></li>
-                {{/each}}
-              </ul></center>
+            
 <b><h3 class="page-header">Choose Your Interest</h3></b>
  <div class="row">
         <div class="col-lg-4">
@@ -32,14 +26,14 @@
           <img class="img-circle" src="../img/med.jpg" alt="Medical Science" width="200" height="200">
           <h2 style="margin-top: 10px;">Medical</h2>
           <p>A process or action that is the focus of a clinical study. Interventions include drugs, medical devices, procedures, vaccines, and other products that are either investigational or already available. Interventions can also include noninvasive approaches, such as education or modifying diet and exercise.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-default" href="/users/medcollg" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="../img/man.jpg" alt="Management" width="200" height="200">
           <h2 style="margin-top: 10px;">Management</h2>
           <p>Management includes the activities of setting the strategy of an organization and coordinating the efforts of its employees (or of volunteers) to accomplish its objectives through the application of available resources, such as financial, natural, technological, and human resources.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-default" href="/users/mgmtcollg" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><br><br><br><br>
-<b><h3 class="page-header">Your Reviews</h3></b>
+
 </div>

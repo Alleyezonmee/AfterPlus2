@@ -1,6 +1,6 @@
 <div class="container">
-      <header class="jumbotron my-4">
-        <h1 class="display-3">Hello, {{user.name}}!</h1>
+      <header class="jumbotron my-3">
+        <h2 class="display-4">Hello, {{user.name}}!</h2>
       </header>
  {{#if success_msg}} 
             <div class="alert alert-success">{{success_msg}}</div>
@@ -17,7 +17,7 @@
       {{#if clg}}
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+            <img class="card-img-top" src="/img/editpic.png" alt="">
             <div class="card-body">
               <h4 class="card-title">Edit Your College Details</h4>
             </div>
@@ -26,10 +26,33 @@
             </div>
           </div>
         </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="/img/colgpic.png" alt="">
+            <div class="card-body">
+              <h4 class="card-title">View Your College</h4>
+            </div>
+            <div class="card-footer">
+              <a href="/inside/vcrcollg" class="btn btn-primary">Go!</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="/img/revpic.png" alt="">
+            <div class="card-body">
+              <h4 class="card-title">See Reviews</h4>
+            </div>
+            <div class="card-footer">
+              <a href="/inside/reviewcr" class="btn btn-primary">Go!</a>
+            </div>
+          </div>
+        </div>
         {{else}}
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+            <img class="card-img-top" src="/img/addcolg.png" alt="">
             <div class="card-body">
               <h4 class="card-title">Add Your College</h4>
               
@@ -40,29 +63,6 @@
           </div>
         </div>
         {{/if}}
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-            <div class="card-body">
-              <h4 class="card-title">View Your College</h4>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Go!</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-            <div class="card-body">
-              <h4 class="card-title">See Reviews</h4>
-            </div>
-            <div class="card-footer">
-              <a href="/inside/reviewcr" class="btn btn-primary">Go!</a>
-            </div>
-          </div>
-        </div>
 
       </div>
 </div>
